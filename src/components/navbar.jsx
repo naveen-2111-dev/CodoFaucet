@@ -58,6 +58,12 @@ const Navbar = () => {
             <div className="hidden md:flex space-x-4">
               <ul className="flex space-x-4">
                 <Link
+                  to="/"
+                  className="text-gray-300 hover:text-white cursor-pointer"
+                >
+                  Home
+                </Link>
+                <Link
                   to="/about"
                   className="text-gray-300 hover:text-white cursor-pointer"
                 >
@@ -68,9 +74,6 @@ const Navbar = () => {
                 </li>
                 <li className="text-gray-300 hover:text-white cursor-pointer">
                   dApp
-                </li>
-                <li className="text-gray-300 hover:text-white cursor-pointer">
-                  Bridge
                 </li>
               </ul>
             </div>
@@ -153,20 +156,27 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-black text-white p-4 z-50 absolute top-0 left-0 right-0">
           <ul className="space-y-4">
-            <Link
-              to="/about"
-              className="text-gray-300 hover:text-white cursor-pointer"
-            >
-              About
-            </Link>
+            <li>
+              <Link
+                to="/"
+                className="text-gray-300 hover:text-white cursor-pointer"
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/about"
+                className="text-gray-300 hover:text-white cursor-pointer"
+              >
+                About
+              </Link>
+            </li>
             <li className="text-gray-300 hover:text-white cursor-pointer">
               Docs
             </li>
             <li className="text-gray-300 hover:text-white cursor-pointer">
               dApp
-            </li>
-            <li className="text-gray-300 hover:text-white cursor-pointer">
-              Bridge
             </li>
             <li>
               <button
