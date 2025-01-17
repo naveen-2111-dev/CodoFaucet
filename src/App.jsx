@@ -3,6 +3,7 @@ import "tailwindcss/tailwind.css";
 import Navbar from "./components/navbar";
 import Faucet from "./pages/Faucet";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import About from "./pages/About";
 
 /**
  * App Component
@@ -23,6 +24,7 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Faucet />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </Router>
   );
