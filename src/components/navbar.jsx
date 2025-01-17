@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Meta from "../pictures/Meta.png";
-import Logo from "../pictures/Logo.png";
+import Logo from "../pictures/image copy.png";
 import BIT from "../pictures/Bit.png";
 import Connect from "../utils/connect";
 import { useMyContext } from "../context";
+import { Link } from "react-router-dom";
 
 /**
  * Navbar Component
@@ -48,17 +49,20 @@ const Navbar = () => {
 
   return (
     <div className="bg-black relative z-10">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sticky top-0 bg-black shadow-md">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-4">
             <div className="text-white font-bold text-lg">
-              <img src={Logo} alt="logo" width="80" height="80" />
+              <img src={Logo} alt="logo" width="40" height="40" />
             </div>
             <div className="hidden md:flex space-x-4">
               <ul className="flex space-x-4">
-                <li className="text-gray-300 hover:text-white cursor-pointer">
+                <Link
+                  to="/about"
+                  className="text-gray-300 hover:text-white cursor-pointer"
+                >
                   About
-                </li>
+                </Link>
                 <li className="text-gray-300 hover:text-white cursor-pointer">
                   Docs
                 </li>
@@ -149,9 +153,12 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-black text-white p-4 z-50 absolute top-0 left-0 right-0">
           <ul className="space-y-4">
-            <li className="text-gray-300 hover:text-white cursor-pointer">
+            <Link
+              to="/about"
+              className="text-gray-300 hover:text-white cursor-pointer"
+            >
               About
-            </li>
+            </Link>
             <li className="text-gray-300 hover:text-white cursor-pointer">
               Docs
             </li>
